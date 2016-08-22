@@ -1,0 +1,2 @@
+serviceClass: org.kingkingyyk.rigbuilder.client.GreetingService
+path: E930845AD645B96FCE123EAF732A581B.gwt.rpc
