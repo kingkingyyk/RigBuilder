@@ -1,15 +1,251 @@
-/** Add css rules here for your application. */
-			
-/** Example rules used by the template application (remove for your app) */
-h1 {
-	font-family: "Georgia", serif;	
+.background {
+	transition: background 1000ms ease-in 1000ms;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.title {
+	background-color: #3498db;
+	width : 100%;
+	margin: 0px 0px 0px;
+	line-height: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: titleFade;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-duration: 0.5s;
+	position: fixed;
+}
+
+@keyframes titleFade {
+	0% {opacity:0; line-height:0px}
+	100% {opacity:1; line-height:70px}
+}
+
+.titleText {
+	font-family: 'Francois One', sans-serif;
+	font-size: 2em;
+	margin-top: 8px;
+	margin-left: 30px;
+	opacity: 0;
+	color: rgba(255,255,255,1.0);
+	text-align: left;
+	vertical-align: middle;
+	animation-name: titleElementFade;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 0.5s;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	cursor: default;
+}
+
+.copyBtn {
+	width: 90px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5em;
+	margin-top: 12px;
+	margin-left: 10px;
+	margin-right: -20px;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.0);
+	color: white;
+	text-align: middle;
+	vertical-align: middle;
+	animation-name: titleElementFade;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 0.5s;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	cursor: default;
+	border-radius: 8px;
+	border: 2px solid rgba(255,255,255,0.5);
+	transition-duration: 0.3s;
+}
+
+.copyBtn:hover {
+	background-color: rgba(255,255,255,0.5);
+}
+
+.copyPanel {
+	border: none;
+	margin: auto;
+	background-color: white;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding: 30px 30px 30px 30px;
+	filter: drop-shadow(2px 3px 3px black);
+}
+
+.copyPanelText {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	color: black;
+	margin: auto;
+	text-align: middle;
+	vertical-align: middle;
+}
+
+.priceText {
+	width: auto;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 2em;
+	margin-top: 8px;
+	margin-left: 10px;
+	padding-right: 10px;
+	opacity: 0;
+	color: white;
+	text-align: right;
+	vertical-align: middle;
+	animation-name: titleElementFade;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-delay: 0.5s;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	cursor: default;
+}
+
+@keyframes titleElementFade {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+@keyframes gitHubIconHover {
+	0% {opacity:1;}
+	50% {opacity:0;}
+	80% {opacity:1;}
+}
+
+.loadingTextLoop {
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
 	font-size: 2em;
 	font-weight: bold;
-	color: white;
-	height: 100px;
-	margin: 0px 0px 70px;
+	color: black;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 100px;
-	background-color : rgba(255,255,255,0.2);
+	margin-top: 200px;
+	opacity: 1;
+	animation-name: loadingTextLoopAnim;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+	animation-duration: 3s;
+}
+
+@keyframes loadingTextLoopAnim {
+	0% {opacity: 0;}
+	40% {opacity: 1;}
+	60% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.titleBottomPadding {
+	height: 1000px;
+	animation-name: titleBottomPaddingAnim;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+	animation-duration: 0.5s;
+}
+
+@keyframes titleBottomPaddingAnim {
+	0% {height: 1000px;}
+	100% {height: 100px;}
+}
+
+.cardPanel {
+	width: 610px;
+	height: 30px;
+	margin: 20px auto;
+	border: solid;
+	background-color: #ecf0f1;
+	border-width: 1px;
+	border-color: rgba(255,255,255,0.1);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardTextLeft {
+	width: 150px;
+	font-family: 'Francois One', sans-serif;
+	font-size: 1.5em;
+	text-align: right;
+	vertical-align: middle;
+	color: black;
+	margin: 20px;
+	cursor: default;
+}
+
+.cardComboBox {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+	width: 400px;
+	padding-left: 10px;
+	text-align: left;
+	vertical-align: middle;
+	color: black;
+	margin-top: 15px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+}
+
+.cardLogoImagePanel{
+	height: 35px;
+	width: 35px;
+	margin-top: 16px;
+	margin-left: 10px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.cardLogoImage {
+	width: 35px;
+}
+
+.cardTextRight {
+	font-family: 'Francois One', sans-serif;
+	font-size: 1.5em;
+	width: 30px;
+	text-align: left;
+	vertical-align: middle;
+	color: black;
+	margin: 20px;
+	margin-left: 10px;
+	cursor: default;
+}
+
+.endPanel {
+	background-color: #3498db;
+	width : 100%;
+	height: 60px;
+	margin-top: 60px;
+	padding: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gitHubIcon {
+	height: 40px;
+	width: 40px;
+	opacity: 1;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+.gitHubIcon:hover {
+	animation-name: gitHubIconHover;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.endPanelText {
+	font-family: 'Francois One', sans-serif;
+	font-size: 1em;
+	margin-top: 5px;
+	color: white;
+	text-align: left;
 }
