@@ -227,22 +227,29 @@ public class RigBuilder implements EntryPoint {
 			comboBox.addChangeHandler(new ChangeHandler() {
 				@Override
 				public void onChange(ChangeEvent event) {
-					String selected=comboBox.getSelectedItemText();
+					final String selected=comboBox.getSelectedItemText();
 					priceText.setText(String.valueOf(priceMap.get(selected)));
 					
-					String brand=selected.split(" ")[0];
-					if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
-					else logoImage.setUrl(logoMap.get("N/A"));
+					logoImage.setUrl("https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif");
 					
-					if (productPageMap.containsKey(selected)) {
-						logoImage.getElement().getStyle().setProperty("cursor", "pointer");
-						logoImage.getElement().getStyle().setProperty("link", productPageMap.get(selected));
-						logoImage.setTitle("Click me to go product page!");
-					} else {
-						logoImage.getElement().getStyle().setProperty("cursor", "default");
-						logoImage.getElement().getStyle().setProperty("link","");
-						logoImage.setTitle("");
-					}
+					Timer t=new Timer() {
+						public void run () {
+							String brand=selected.split(" ")[0];
+							if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
+							else logoImage.setUrl(logoMap.get("N/A"));
+							
+							if (productPageMap.containsKey(selected)) {
+								logoImage.getElement().getStyle().setProperty("cursor", "pointer");
+								logoImage.getElement().getStyle().setProperty("link", productPageMap.get(selected));
+								logoImage.setTitle("Click me to go product page!");
+							} else {
+								logoImage.getElement().getStyle().setProperty("cursor", "default");
+								logoImage.getElement().getStyle().setProperty("link","");
+								logoImage.setTitle("");
+							}
+						}
+					};
+					t.schedule(1000);
 					
 					calcTotalPrice();
 				}
@@ -363,7 +370,7 @@ public class RigBuilder implements EntryPoint {
 			hp.add(lblGithub);
 	
 			HTML endText=new HTML("Since there is no constraints in mix-and-match, it is important to check the compatibility before buying!<br />"
-									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.0 [1 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
+									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.1 [1 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
 				endText.setStyleName("endPanelText");
 			hp.add(endText);
 			
