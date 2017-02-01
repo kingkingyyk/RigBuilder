@@ -155,7 +155,7 @@ public class RigBuilder implements EntryPoint {
 	
 	private HashMap<String,Integer> priceMap=new HashMap<>();
 	private HashMap<String,String> logoMap=new HashMap<>();
-	private HashMap<String,String> urlMap=new HashMap<>();
+	private HashMap<String,String> productPageMap=new HashMap<>();
 	private ArrayList<String> list=new ArrayList<>();
 	
 	public int indexOfStartsWith(int startIndex,String target) {
@@ -216,6 +216,14 @@ public class RigBuilder implements EntryPoint {
 				hardwareComboBoxItemPosition.get(comboBox).put(values,comboBox.getItemCount()-1);
 			}
 			
+			logoImage.addClickHandler(new ClickHandler() {
+				@Override
+				public void onClick(ClickEvent event) {
+					if (logoImage.getElement().getStyle().getProperty("link")!="") {
+						Window.open(logoImage.getElement().getStyle().getProperty("link"),"_blank","");
+					}
+				}
+			});
 			comboBox.addChangeHandler(new ChangeHandler() {
 				@Override
 				public void onChange(ChangeEvent event) {
@@ -225,6 +233,16 @@ public class RigBuilder implements EntryPoint {
 					String brand=selected.split(" ")[0];
 					if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
 					else logoImage.setUrl(logoMap.get("N/A"));
+					
+					if (productPageMap.containsKey(selected)) {
+						logoImage.getElement().getStyle().setProperty("cursor", "pointer");
+						logoImage.getElement().getStyle().setProperty("link", productPageMap.get(selected));
+						logoImage.setTitle("Click me to go product page!");
+					} else {
+						logoImage.getElement().getStyle().setProperty("cursor", "default");
+						logoImage.getElement().getStyle().setProperty("link","");
+						logoImage.setTitle("");
+					}
 					
 					calcTotalPrice();
 				}
@@ -269,7 +287,7 @@ public class RigBuilder implements EntryPoint {
 					String model=st.nextToken();
 					int price=Integer.parseInt(st.nextToken());
 					priceMap.put(model,price);
-					if (st.hasMoreTokens()) urlMap.put(model,st.nextToken());
+					if (st.hasMoreTokens()) productPageMap.put(model,st.nextToken());
 					
 					models.add(model);
 				} else break;

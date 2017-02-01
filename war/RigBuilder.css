@@ -157,7 +157,7 @@
 }
 
 .cardPanel {
-	width: 610px;
+	width: 630px;
 	height: 30px;
 	margin: 20px auto;
 	border: solid;
@@ -204,7 +204,7 @@
 
 .cardLogoImage {
 	width: 35px;
-	cursor: pointer;
+	cursor: default;
 }
 
 .cardTextRight {
