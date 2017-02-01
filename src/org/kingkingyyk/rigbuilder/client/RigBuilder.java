@@ -155,6 +155,7 @@ public class RigBuilder implements EntryPoint {
 	
 	private HashMap<String,Integer> priceMap=new HashMap<>();
 	private HashMap<String,String> logoMap=new HashMap<>();
+	private HashMap<String,String> urlMap=new HashMap<>();
 	private ArrayList<String> list=new ArrayList<>();
 	
 	public int indexOfStartsWith(int startIndex,String target) {
@@ -264,10 +265,11 @@ public class RigBuilder implements EntryPoint {
 			ArrayList<String> models=new ArrayList<>();
 			for (int index=indexOfStartsWith(0,hardware)+1;true;index++) {
 				st=new StringTokenizer(list.get(index));
-				if (st.countTokens()==2) {
+				if (st.countTokens()>1) {
 					String model=st.nextToken();
 					int price=Integer.parseInt(st.nextToken());
 					priceMap.put(model,price);
+					if (st.hasMoreTokens()) urlMap.put(model,st.nextToken());
 					
 					models.add(model);
 				} else break;

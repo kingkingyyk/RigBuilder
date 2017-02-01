@@ -204,6 +204,7 @@
 
 .cardLogoImage {
 	width: 35px;
+	cursor: pointer;
 }
 
 .cardTextRight {
