@@ -3,10 +3,10 @@ package org.kingkingyyk.rigbuilder.client;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.PopupPanel;
 
-public class CopyPanel extends PopupPanel {
+public class ReviewPanel extends PopupPanel {
 	private HTML txt;
 	  
-	public CopyPanel() {
+	public ReviewPanel() {
 		txt=new HTML();
 		txt.setStyleName("copyPanelText");
 		add(txt);
@@ -14,7 +14,6 @@ public class CopyPanel extends PopupPanel {
 		setAnimationEnabled(true);
 		setAutoHideEnabled(true);
 		setGlassEnabled(true);
-		setAnimationType(AnimationType.ROLL_DOWN);
 		hide();
 		
 		getGlassElement().getStyle().setProperty("width","100%");

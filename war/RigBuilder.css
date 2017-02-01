@@ -12,14 +12,14 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: titleFade;
 	animation-iteration-count: 1;
-	animation-timing-function: ease;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
 	animation-duration: 0.5s;
 	position: fixed;
 }
 
 @keyframes titleFade {
 	0% {opacity:0; line-height:0px}
-	100% {opacity:1; line-height:70px}
+	100% {opacity:1; line-height:60px}
 }
 
 .titleText {
@@ -33,14 +33,14 @@
 	vertical-align: middle;
 	animation-name: titleElementFade;
 	animation-iteration-count: 1;
-	animation-timing-function: linear;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
 	animation-delay: 0.5s;
 	animation-duration: 0.25s;
 	animation-fill-mode: forwards;
 	cursor: default;
 }
 
-.copyBtn {
+.reviewBtn {
 	width: 90px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.5em;
@@ -54,7 +54,7 @@
 	vertical-align: middle;
 	animation-name: titleElementFade;
 	animation-iteration-count: 1;
-	animation-timing-function: linear;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
 	animation-delay: 0.5s;
 	animation-duration: 0.25s;
 	animation-fill-mode: forwards;
@@ -64,27 +64,37 @@
 	transition-duration: 0.3s;
 }
 
-.copyBtn:hover {
+.reviewBtn:hover {
 	background-color: rgba(255,255,255,0.5);
 }
 
-.copyPanel {
-	border: none;
+.reviewPanel {
+	border-color: white;
+	border-radius: 10px;
 	margin: auto;
 	background-color: white;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	padding: 30px 30px 30px 30px;
-	filter: drop-shadow(2px 3px 3px black);
+	filter: drop-shadow(5px 5px 10px rgba(255,255,255,0.5));
 }
 
-.copyPanelText {
-	font-family: 'Oswald', sans-serif;
-	font-size: 1em;
+.reviewPanelText {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
 	color: black;
 	margin: auto;
 	text-align: middle;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.line-separator{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height:1px;
+	background:#717171;
 	vertical-align: middle;
 }
 
@@ -101,7 +111,7 @@
 	vertical-align: middle;
 	animation-name: titleElementFade;
 	animation-iteration-count: 1;
-	animation-timing-function: linear;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
 	animation-delay: 0.5s;
 	animation-duration: 0.25s;
 	animation-fill-mode: forwards;
@@ -111,12 +121,6 @@
 @keyframes titleElementFade {
 	0% {opacity:0;}
 	100% {opacity:1;}
-}
-
-@keyframes gitHubIconHover {
-	0% {opacity:1;}
-	50% {opacity:0;}
-	80% {opacity:1;}
 }
 
 .loadingTextLoop {
@@ -131,7 +135,7 @@
 	opacity: 1;
 	animation-name: loadingTextLoopAnim;
 	animation-iteration-count: infinite;
-	animation-timing-function: ease-in;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 	animation-duration: 3s;
 }
 
@@ -144,11 +148,13 @@
 
 .titleBottomPadding {
 	height: 1000px;
+	padding: 0px;
+	margin: 0px;
 	animation-name: titleBottomPaddingAnim;
 	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 	animation-fill-mode: forwards;
-	animation-duration: 0.5s;
+	animation-duration: 0.4s;
 }
 
 @keyframes titleBottomPaddingAnim {
@@ -163,6 +169,7 @@
 	border: solid;
 	background-color: #ecf0f1;
 	border-width: 1px;
+	opacity: 1;
 	border-color: rgba(255,255,255,0.1);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -190,6 +197,7 @@
 	margin-top: 15px;
 	padding-top: 9px;
 	padding-bottom: 6px;
+	filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.3));
 }
 
 .cardLogoImagePanel{
@@ -205,6 +213,7 @@
 .cardLogoImage {
 	width: 35px;
 	cursor: default;
+	filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.3));
 }
 
 .cardTextRight {
@@ -225,7 +234,7 @@
 	height: 60px;
 	margin-top: 60px;
 	padding: 10px 10px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px -8px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 .gitHubIcon {
@@ -233,14 +242,7 @@
 	width: 40px;
 	opacity: 1;
 	cursor: pointer;
-	transition-duration: 0.5s;
-}
-
-.gitHubIcon:hover {
-	animation-name: gitHubIconHover;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+	filter: drop-shadow(8px 8px 10px rgba(0,0,0,0.5));
 }
 
 .endPanelText {

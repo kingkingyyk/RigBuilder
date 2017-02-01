@@ -56,10 +56,10 @@ public class RigBuilder implements EntryPoint {
 	
 	public Label lblPrice;
 	public ListBox comboBoxRecommendedBuilds;
-	public Button btnCopy;
+	public Button btnReview;
 	
 	public void drawTitle() {
-		final CopyPanel cpPanel=new CopyPanel();
+		final ReviewPanel cpPanel=new ReviewPanel();
 		
 		HorizontalPanel hp=new HorizontalPanel();
 		hp.setStyleName("title");
@@ -80,12 +80,12 @@ public class RigBuilder implements EntryPoint {
 				lblPrice.setVisible(false);
 			hp.add(lblPrice);
 		
-			btnCopy=new Button("Copy");
-				btnCopy.getElement().setPropertyString("class", "copyBtn");
-				btnCopy.getElement().setPropertyString("data-clipboard-target", "topkekekek");
-				btnCopy.setStyleName("copyBtn");
-				btnCopy.setVisible(false);
-				btnCopy.addClickHandler(new ClickHandler() {
+			btnReview=new Button("Review");
+				btnReview.getElement().setPropertyString("class", "reviewBtn");
+				btnReview.getElement().setPropertyString("data-clipboard-target", "topkekekek");
+				btnReview.setStyleName("reviewBtn");
+				btnReview.setVisible(false);
+				btnReview.addClickHandler(new ClickHandler() {
 					@Override
 					public void onClick(ClickEvent event) {
 						int startIndex=indexOfStartsWith(0,"BUILD START");
@@ -95,25 +95,25 @@ public class RigBuilder implements EntryPoint {
 						ArrayList<String> hardwareList=new ArrayList<>();
 						while (st.hasMoreTokens()) hardwareList.add(st.nextToken());
 						
-						String toCopy="<div><span>";
+						String toReview="<div><span>";
 						for (String hardware : hardwareList) {
 							ListBox comboBox=hardwareComboBox.get(hardware);
 							if (!comboBox.getSelectedItemText().equals("N/A")) {
-								toCopy+=comboBox.getSelectedItemText();
-								toCopy+=" RM";
-								toCopy+=priceMap.get(comboBox.getSelectedItemText());
-								toCopy+="<br/>";
+								toReview+=comboBox.getSelectedItemText();
+								toReview+=" RM";
+								toReview+=priceMap.get(comboBox.getSelectedItemText());
+								toReview+="<br/><div class=\"line-separator\"></div>";
 							}
 						}
-						toCopy+="<br />"+lblPrice.getText();
-						toCopy+="</span></div>";
+						toReview+=lblPrice.getText();
+						toReview+="</span></div>";
 						
-						cpPanel.setText(toCopy);
+						cpPanel.setText(toReview);
 						cpPanel.center();
 						cpPanel.show();
 					}
 				});
-			hp.add(btnCopy);
+			hp.add(btnReview);
 		RootPanel.get().add(hp);
 		
 		hp=new HorizontalPanel(); // no idea. without this, the top panel will be at middle.
@@ -123,7 +123,7 @@ public class RigBuilder implements EntryPoint {
 	public void showAllTitleElements() {
 		lblPrice.setVisible(true);
 		comboBoxRecommendedBuilds.setVisible(true);
-		btnCopy.setVisible(true);
+		btnReview.setVisible(true);
 	}
 	
 	public Label lblLoading;
@@ -384,10 +384,11 @@ public class RigBuilder implements EntryPoint {
 		RootPanel.getBodyElement().getStyle().setPadding(0,Unit.PX);
 		drawTitle();
 		showLoadscreen();
-		
+
 		greetingService.greetServer("", new AsyncCallback<ArrayList<String>>() {
 			@Override
 			public void onFailure(Throwable caught) {
+				lblLoading.getElement().getStyle().setProperty("animationIterationCount","0");
 				setLoadscreenText(":( We have encountered problem when loading data.");
 			}
 
@@ -395,6 +396,7 @@ public class RigBuilder implements EntryPoint {
 			public void onSuccess(ArrayList<String> result) {
 				if (result==null) onFailure(null);
 				else {
+					setLoadscreenText("Done Loading !");
 					int delay=destroyLoadscreen();
 					showAllTitleElements();
 					list=result;
