@@ -186,6 +186,8 @@ public class RigBuilder implements EntryPoint {
 	
 	public static HashMap<String,ListBox> hardwareComboBox=new HashMap<>();
 	public static HashMap<ListBox,HashMap<String,Integer>> hardwareComboBoxItemPosition=new HashMap<>();
+	public static HashMap<Image,String> imageHyperlink=new HashMap<>();
+	public static String loadingImageUrl="https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif";
 	
 	public void addHardwareCard(String s, ArrayList<String> comboBoxValues) {
 		HorizontalPanel hp=new HorizontalPanel();
@@ -219,9 +221,7 @@ public class RigBuilder implements EntryPoint {
 			logoImage.addClickHandler(new ClickHandler() {
 				@Override
 				public void onClick(ClickEvent event) {
-					if (logoImage.getElement().getStyle().getProperty("link")!="") {
-						Window.open(logoImage.getElement().getStyle().getProperty("link"),"_blank","");
-					}
+					if (imageHyperlink.containsKey(logoImage)) Window.open(imageHyperlink.get(logoImage),"_blank","");
 				}
 			});
 			comboBox.addChangeHandler(new ChangeHandler() {
@@ -230,22 +230,25 @@ public class RigBuilder implements EntryPoint {
 					final String selected=comboBox.getSelectedItemText();
 					priceText.setText(String.valueOf(priceMap.get(selected)));
 					
-					logoImage.setUrl("https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif");
+					if (!logoImage.getUrl().equals(loadingImageUrl)) logoImage.setUrl(loadingImageUrl);
 					
 					Timer t=new Timer() {
 						public void run () {
-							String brand=selected.split(" ")[0];
-							if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
-							else logoImage.setUrl(logoMap.get("N/A"));
-							
-							if (productPageMap.containsKey(selected)) {
-								logoImage.getElement().getStyle().setProperty("cursor", "pointer");
-								logoImage.getElement().getStyle().setProperty("link", productPageMap.get(selected));
-								logoImage.setTitle("Click me to go product page!");
-							} else {
-								logoImage.getElement().getStyle().setProperty("cursor", "default");
-								logoImage.getElement().getStyle().setProperty("link","");
-								logoImage.setTitle("");
+							String currSelected=comboBox.getSelectedItemText();
+							if (currSelected.equals(selected)) {
+								String brand=selected.split(" ")[0];
+								if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
+								else logoImage.setUrl(logoMap.get("N/A"));
+								
+								if (productPageMap.containsKey(selected)) {
+									logoImage.getElement().getStyle().setProperty("cursor", "pointer");
+									logoImage.setTitle("Click me to go product page!");
+									imageHyperlink.put(logoImage,productPageMap.get(selected));
+								} else {
+									logoImage.getElement().getStyle().setProperty("cursor", "default");
+									logoImage.setTitle("");
+									imageHyperlink.remove(logoImage);
+								}
 							}
 						}
 					};
