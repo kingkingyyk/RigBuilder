@@ -8,9 +8,9 @@ public class ReviewPanel extends PopupPanel {
 	  
 	public ReviewPanel() {
 		txt=new HTML();
-		txt.setStyleName("copyPanelText");
+		txt.setStyleName("reviewPanelText");
 		add(txt);
-		setStyleName("copyPanel");
+		setStyleName("reviewPanel");
 		setAnimationEnabled(true);
 		setAutoHideEnabled(true);
 		setGlassEnabled(true);
