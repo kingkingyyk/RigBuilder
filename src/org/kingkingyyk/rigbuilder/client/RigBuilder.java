@@ -11,6 +11,8 @@ import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.DomEvent;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.Window;
@@ -54,6 +56,7 @@ public class RigBuilder implements EntryPoint {
 		}
 	}
 	
+	public HorizontalPanel titlePanel;
 	public Label lblPrice;
 	public ListBox comboBoxRecommendedBuilds;
 	public Button btnReview;
@@ -114,6 +117,7 @@ public class RigBuilder implements EntryPoint {
 					}
 				});
 			hp.add(btnReview);
+		titlePanel=hp;
 		RootPanel.get().add(hp);
 		
 		hp=new HorizontalPanel(); // no idea. without this, the top panel will be at middle.
@@ -269,9 +273,16 @@ public class RigBuilder implements EntryPoint {
 	
 	public void setupTable() {
 		//=============== Add some padding below title!===============
-		HorizontalPanel hp=new HorizontalPanel();
-		hp.setStyleName("titleBottomPadding");
-		RootPanel.get().add(hp);
+		final HorizontalPanel titleBtmPadding=new HorizontalPanel();
+		titleBtmPadding.setStyleName("titleBottomPadding");
+		titleBtmPadding.getElement().getStyle().setHeight(titlePanel.getElement().getClientHeight(),Unit.PX);
+		Window.addResizeHandler(new ResizeHandler() {
+			@Override
+			public void onResize(ResizeEvent event) {
+				titleBtmPadding.getElement().getStyle().setHeight(titlePanel.getElement().getClientHeight(),Unit.PX);
+			}
+		});
+		RootPanel.get().add(titleBtmPadding);
 		//===============Get hardware from build columns=================
 		int startIndex=indexOfStartsWith(0,"BUILD START");
 		StringTokenizer st=new StringTokenizer(list.get(startIndex));
@@ -358,6 +369,10 @@ public class RigBuilder implements EntryPoint {
 	
 	public void setupFooter() {
 		HorizontalPanel hp=new HorizontalPanel();
+		hp.getElement().getStyle().setHeight(60,Unit.PX);
+		RootPanel.get().add(hp);
+		
+		hp=new HorizontalPanel();
 		hp.setStyleName("endPanel");
 		hp.getElement().getStyle().setBackgroundColor(currTitleColor);
 		
@@ -373,7 +388,7 @@ public class RigBuilder implements EntryPoint {
 			hp.add(lblGithub);
 	
 			HTML endText=new HTML("Since there is no constraints in mix-and-match, it is important to check the compatibility before buying!<br />"
-									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.1 [1 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
+									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.1 [3 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
 				endText.setStyleName("endPanelText");
 			hp.add(endText);
 			
