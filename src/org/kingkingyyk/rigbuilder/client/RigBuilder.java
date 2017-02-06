@@ -24,6 +24,7 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class RigBuilder implements EntryPoint {
 	
@@ -188,80 +189,103 @@ public class RigBuilder implements EntryPoint {
 		backgroundTimer.scheduleRepeating(10000);
 	}
 	
+	public static HashMap<String,String> hardwareInfoMap=new HashMap<>();
 	public static HashMap<String,ListBox> hardwareComboBox=new HashMap<>();
 	public static HashMap<ListBox,HashMap<String,Integer>> hardwareComboBoxItemPosition=new HashMap<>();
 	public static HashMap<Image,String> imageHyperlink=new HashMap<>();
 	public static String loadingImageUrl="https://mir-s3-cdn-cf.behance.net/project_modules/disp/585d0331234507.564a1d239ac5e.gif";
 	
 	public void addHardwareCard(String s, ArrayList<String> comboBoxValues) {
-		HorizontalPanel hp=new HorizontalPanel();
-		hp.setStyleName("cardPanel");
-			Label titleText=new Label(s);
-				titleText.setStyleName("cardTextLeft");
-			hp.add(titleText);
-			
-			final ListBox comboBox=new ListBox();
-				comboBox.setStyleName("cardComboBox");
-				hardwareComboBox.put(s,comboBox);
-				hardwareComboBoxItemPosition.put(comboBox,new HashMap<String,Integer>());
-			hp.add(comboBox);
-			
-			HorizontalPanel imageHP=new HorizontalPanel();
-			imageHP.setStyleName("cardLogoImagePanel");
-				final Image logoImage=new Image();
-					logoImage.setStyleName("cardLogoImage");
-				imageHP.add(logoImage);
-			hp.add(imageHP);
-			
-			final Label priceText=new Label("0");
-				priceText.setStyleName("cardTextRight");
-			hp.add(priceText);
+		final VerticalPanel vp=new VerticalPanel();
+		vp.setStyleName("cardPanel");
 		
-			for (String values : comboBoxValues) {
-				comboBox.addItem(values);
-				hardwareComboBoxItemPosition.get(comboBox).put(values,comboBox.getItemCount()-1);
-			}
+			HorizontalPanel hp=new HorizontalPanel();
+			vp.add(hp);
 			
-			logoImage.addClickHandler(new ClickHandler() {
-				@Override
-				public void onClick(ClickEvent event) {
-					if (imageHyperlink.containsKey(logoImage)) Window.open(imageHyperlink.get(logoImage),"_blank","");
+			final HorizontalPanel infoPanel=new HorizontalPanel();
+				infoPanel.setStyleName("cardTextInfoPanel");
+				final Label lblInfo=new Label();
+				lblInfo.setStyleName("cardTextInfo");
+				lblInfo.setVisible(false);
+				infoPanel.add(lblInfo);
+			vp.add(infoPanel);
+				
+				Label titleText=new Label(s);
+					titleText.setStyleName("cardTextLeft");
+				hp.add(titleText);
+				
+				final ListBox comboBox=new ListBox();
+					comboBox.setStyleName("cardComboBox");
+					hardwareComboBox.put(s,comboBox);
+					hardwareComboBoxItemPosition.put(comboBox,new HashMap<String,Integer>());
+				hp.add(comboBox);
+				
+				HorizontalPanel imageHP=new HorizontalPanel();
+				imageHP.setStyleName("cardLogoImagePanel");
+					final Image logoImage=new Image();
+						logoImage.setStyleName("cardLogoImage");
+					imageHP.add(logoImage);
+				hp.add(imageHP);
+				
+				final Label priceText=new Label("0");
+					priceText.setStyleName("cardTextRight");
+				hp.add(priceText);
+			
+				for (String values : comboBoxValues) {
+					comboBox.addItem(values);
+					hardwareComboBoxItemPosition.get(comboBox).put(values,comboBox.getItemCount()-1);
 				}
-			});
-			comboBox.addChangeHandler(new ChangeHandler() {
-				@Override
-				public void onChange(ChangeEvent event) {
-					final String selected=comboBox.getSelectedItemText();
-					priceText.setText(String.valueOf(priceMap.get(selected)));
-					
-					if (!logoImage.getUrl().equals(loadingImageUrl)) logoImage.setUrl(loadingImageUrl);
-					
-					Timer t=new Timer() {
-						public void run () {
-							String currSelected=comboBox.getSelectedItemText();
-							if (currSelected.equals(selected)) {
-								String brand=selected.split(" ")[0];
-								if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
-								else logoImage.setUrl(logoMap.get("N/A"));
-								
-								if (productPageMap.containsKey(selected)) {
-									logoImage.getElement().getStyle().setProperty("cursor", "pointer");
-									logoImage.setTitle("Click me to go product page!");
-									imageHyperlink.put(logoImage,productPageMap.get(selected));
-								} else {
-									logoImage.getElement().getStyle().setProperty("cursor", "default");
-									logoImage.setTitle("");
-									imageHyperlink.remove(logoImage);
+				
+				logoImage.addClickHandler(new ClickHandler() {
+					@Override
+					public void onClick(ClickEvent event) {
+						if (imageHyperlink.containsKey(logoImage)) Window.open(imageHyperlink.get(logoImage),"_blank","");
+					}
+				});
+				comboBox.addChangeHandler(new ChangeHandler() {
+					@Override
+					public void onChange(ChangeEvent event) {
+						final String selected=comboBox.getSelectedItemText();
+						priceText.setText(String.valueOf(priceMap.get(selected)));
+						
+						if (!logoImage.getUrl().equals(loadingImageUrl)) logoImage.setUrl(loadingImageUrl);
+						if (hardwareInfoMap.containsKey(selected)) {
+							infoPanel.setHeight("25px");
+							lblInfo.setText(hardwareInfoMap.get(selected));
+						} else {
+							infoPanel.setHeight("0px");
+							lblInfo.setText("");
+						}
+						
+						Timer t=new Timer() {
+							public void run () {
+								String currSelected=comboBox.getSelectedItemText();
+								if (currSelected.equals(selected)) {
+									String brand=selected.split(" ")[0];
+									if (logoMap.containsKey(brand)) logoImage.setUrl(logoMap.get(brand));
+									else logoImage.setUrl(logoMap.get("N/A"));
+									
+									if (productPageMap.containsKey(selected)) {
+										logoImage.getElement().getStyle().setProperty("cursor", "pointer");
+										logoImage.setTitle("Click me to go product page!");
+										imageHyperlink.put(logoImage,productPageMap.get(selected));
+									} else {
+										logoImage.getElement().getStyle().setProperty("cursor", "default");
+										logoImage.setTitle("");
+										imageHyperlink.remove(logoImage);
+									}
+									
+									lblInfo.setVisible(hardwareInfoMap.containsKey(selected));
 								}
 							}
-						}
-					};
-					t.schedule(1000);
-					
-					calcTotalPrice();
-				}
-			});
-		RootPanel.get().add(hp);
+						};
+						t.schedule(350);
+						
+						calcTotalPrice();
+					}
+				});
+			
+		RootPanel.get().add(vp);
 	}
 	
 	public void calcTotalPrice() {
@@ -309,6 +333,7 @@ public class RigBuilder implements EntryPoint {
 					int price=Integer.parseInt(st.nextToken());
 					priceMap.put(model,price);
 					if (st.hasMoreTokens()) productPageMap.put(model,st.nextToken());
+					if (st.hasMoreTokens()) hardwareInfoMap.put(model,st.nextToken());
 					
 					models.add(model);
 				} else break;
@@ -388,7 +413,7 @@ public class RigBuilder implements EntryPoint {
 			hp.add(lblGithub);
 	
 			HTML endText=new HTML("Since there is no constraints in mix-and-match, it is important to check the compatibility before buying!<br />"
-									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.1 [3 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
+									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.2 [6 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
 				endText.setStyleName("endPanelText");
 			hp.add(endText);
 			

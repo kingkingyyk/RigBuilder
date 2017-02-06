@@ -156,7 +156,7 @@
 	margin: 0px;
 	animation-name: titleBottomPaddingAnim;
 	animation-iteration-count: 1;
-	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 	animation-duration: 0.4s;
 }
 
@@ -167,7 +167,6 @@
 
 .cardPanel {
 	width: 630px;
-	height: 30px;
 	margin: 20px auto;
 	border: solid;
 	background-color: #ecf0f1;
@@ -175,6 +174,7 @@
 	opacity: 1;
 	border-color: rgba(255,255,255,0.1);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 1s;
 }
 
 .cardTextLeft {
@@ -228,6 +228,22 @@
 	color: black;
 	margin: 20px;
 	margin-left: 10px;
+	cursor: default;
+}
+
+.cardTextInfoPanel {
+	height: 0px;
+	transition:all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.cardTextInfo {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	margin-left: 200px;
+	text-align: left;
+	vertical-align: middle;
+	margin-bottom: 5px;
+	color: black;
 	cursor: default;
 }
 
