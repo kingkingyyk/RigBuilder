@@ -425,7 +425,7 @@ public class RigBuilder implements EntryPoint {
 			hp.add(lblGithub);
 	
 			HTML endText=new HTML("Since there is no constraints in mix-and-match, it is important to check the compatibility before buying!<br />"
-									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.3 [20 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
+									+ "Price Update : "+new StringTokenizer(list.get(0)).nextToken()+" | Site : Version 2.0.3 [20 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
 				endText.setStyleName("endPanelText");
 			hp.add(endText);
 			
