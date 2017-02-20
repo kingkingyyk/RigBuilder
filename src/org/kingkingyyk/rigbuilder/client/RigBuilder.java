@@ -307,9 +307,21 @@ public class RigBuilder implements EntryPoint {
 			}
 		});
 		RootPanel.get().add(titleBtmPadding);
+		//============= Add news announcement =================
+		StringTokenizer st=new StringTokenizer(list.get(0));
+		if (st.countTokens()==2) {
+			st.nextToken();
+			final HorizontalPanel newsPanel=new HorizontalPanel();
+			newsPanel.setStyleName("newsPanel");
+			newsPanel.getElement().getStyle().setBackgroundColor(currTitleColor);
+				Label lblNews=new Label(st.nextToken());
+					lblNews.setStyleName("newsPanelText");
+				newsPanel.add(lblNews);
+			RootPanel.get().add(newsPanel);
+		}
 		//===============Get hardware from build columns=================
 		int startIndex=indexOfStartsWith(0,"BUILD START");
-		StringTokenizer st=new StringTokenizer(list.get(startIndex));
+		st=new StringTokenizer(list.get(startIndex));
 		st.nextToken(); st.nextToken(); //ignore.
 		
 		ArrayList<String> hardwareList=new ArrayList<>();
@@ -413,7 +425,7 @@ public class RigBuilder implements EntryPoint {
 			hp.add(lblGithub);
 	
 			HTML endText=new HTML("Since there is no constraints in mix-and-match, it is important to check the compatibility before buying!<br />"
-									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.2 [6 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
+									+ "Price Update : "+list.get(0)+" | Site : Version 2.0.3 [20 Feb 2017] | Powered by Google Web Toolkit 2.7.0");
 				endText.setStyleName("endPanelText");
 			hp.add(endText);
 			
@@ -438,12 +450,12 @@ public class RigBuilder implements EntryPoint {
 				else {
 					setLoadscreenText("Done Loading !");
 					int delay=destroyLoadscreen();
-					showAllTitleElements();
 					list=result;
 					//setupBackground();
 					Timer tableTimer=new Timer() {
 						@Override
 						public void run() {
+							showAllTitleElements();
 							setupTable();
 							setupRecommendedBuild();
 							setupFooter();

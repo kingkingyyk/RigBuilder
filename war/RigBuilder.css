@@ -162,7 +162,55 @@
 
 @keyframes titleBottomPaddingAnim {
 	0% {height: 1000px;}
-	100% {height: 100px;}
+	100% {height: 70px;}
+}
+
+.newsPanel {
+	height: 0px;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	filter: brightness(90%);
+	
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	
+	animation-name: newsPanelAnim;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+	animation-duration: 0.4s;
+	animation-delay: 0.8s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes newsPanelAnim {
+	0% {height: 0px;}
+	100% {height: 50px;}
+}
+
+.newsPanelText {
+	height: 0%;
+	width: 100%;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+	opacity: 0.0;
+	align: center;
+	vertical-align: middle;
+	filter: brightness(120%);
+	
+	animation-name: newsPanelTextAnim;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+	animation-duration: 0.4s;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes newsPanelTextAnim {
+	0% {height: 0%; opacity: 0.0;}
+	100% {height: 100%; opacity: 1.0;}
 }
 
 .cardPanel {
