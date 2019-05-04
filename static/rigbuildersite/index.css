@@ -1,0 +1,69 @@
+.choice-view {
+    margin: auto;
+    width: 80%;
+}
+
+.make-thumbnail {
+    height: 24px;
+}
+
+.part-card {
+    background: transparent;
+}
+
+.part-card-background {
+    background-size: 10% auto;
+    background-repeat: no-repeat;
+    background-position: 90% 40%;
+}
+
+.review-div {
+    position: fixed;
+    bottom: -15px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: auto;
+    z-index: 3;
+}
+
+.review-div-mask {
+    position: fixed;
+    background-color: rgba(0,0,0,1.0);
+    opacity: 0.0;
+    z-index: 2;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.review-div-title {
+    width: 100%;
+    padding: 3px 10px 3px 10px;
+    cursor: pointer;
+}
+
+.review-div-details-frame {
+    height: 0px;
+    display: none;
+    width: 100%;
+}
+
+.review-div-details {
+    overflow-y:scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+}
+
+#review-div-details-clipboard {
+    display: none;
+}
+
+.total-price {
+    color: white;
+    font-weight: bold;
+}
+
+

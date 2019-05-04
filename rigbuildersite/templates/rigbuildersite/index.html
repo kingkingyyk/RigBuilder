@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kingkingyyk's Rig Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'rigbuildersite/index.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+    <script src="{% static 'rigbuildersite/index.js' %}"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <ul id="slide-out" class="sidenav">
+      <li class="no-padding">
+          {% for name, builds in formatted_builds.items %}
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect">{{name}}</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            {% for build in builds %}
+                            <li><a class="waves-effect" onclick="setBuild({{build.id}})">RM{{build.price}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+          {% endfor %}
+      </li>
+    </ul>
+    <nav>
+        <div>
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                <a class="brand-logo">kingkingyyk's Rig Builder</a>
+            </div>
+        </div>
+    </nav>
+    <div class="choice-view">
+        {% for part_type, parts in part_types.items %}
+            <div class="col s12 m5 part-card-background {{part_type.slug}}-card-background">
+                <div class="col s12 m5">
+                    <div class="card-panel part-card {{part_type.slug}}-card">
+                        <span class="card-title" style="font-weight: bold">
+                            {{ part_type.name }}
+                        </span>
+                        <span class="{{part_type.slug}}-extra"></span>
+                        <div class="input-field col s12">
+                            <select class="select-part" id="select-part-{{part_type.slug}}" part="{{part_type.slug}}">
+                                {% for part in parts %}
+                                <option value="{{part.id}}">{{ part }} - RM{{ part.price }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="review-div-mask"></div>
+    <div class="card review-div">
+        <div class="review-div-title grey darken-4">
+            <p class="total-price"><span>Total Price : RM</span><span class="total-price-value">0</span></p>
+        </div>
+        <div class="review-div-details-frame">
+            <div class="review-div-details"></div>
+        </div>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="waves-effect waves-light btn-floating btn-large red" id="btn-copy-clipboard">
+            <i class="large material-icons">content_copy</i>
+        </a>
+    </div>
+    <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+                Price Update : {{site_info.price_version}} | Version : {{site_info.version}} | Powered by <a href="https://www.djangoproject.com" target="_blank">Django</a> & <a href="https://materializecss.com" target="_blank">Materialize</a>
+            <a class="grey-text text-lighten-4 right" href="{{site_info.repo_url}}" target="_blank"><img src="https://i.imgur.com/0t1VpUZ.png" style="width:24px"></a>
+            <br><br><br><br>
+            </div>
+          </div>
+    </footer>
+    <textarea id="review-div-details-clipboard"></textarea>
+    <script>
+        M.AutoInit();
+        InitPage();
+    </script>
+</body>
+</html>
