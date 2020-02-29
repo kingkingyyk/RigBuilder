@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
 import { CompCardComponent } from './components/comp-card/comp-card.component';
 
 @NgModule({
@@ -17,6 +20,8 @@ import { CompCardComponent } from './components/comp-card/comp-card.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
     HttpClientModule,
   ],
   providers: [],

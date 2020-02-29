@@ -5,10 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private static componentTypes : string = "";
-  private static makes : string = "";
-  private static components : string = "";
-  private static recommendations : string = "";
+  private static componentTypes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/component-types.json";
+  private static makes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/makes.json";
+  private static components : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/components.json";
+  private static recommendations : string = "https://github.com/kingkingyyk/RigBuilder/blob/develop/data/recommendations.json";
 
   constructor(private client : HttpClient) { }
   getComponentTypes() {
