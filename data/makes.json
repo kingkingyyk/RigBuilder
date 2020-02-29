@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Intel",
+        "logoURL": "https://i.imgur.com/GmJkBEh.png"
+    },
+    {
+        "name": "AMD",
+        "logoURL": "http://i.imgur.com/yCQJbHp.png"
+    },
+    {
+        "name": "CoolerMaster",
+        "logoURL": "https://i.imgur.com/itpNgBi.png" 
+    },
+    {
+        "name": "Thermaltake",
+        "logoURL": "https://i.imgur.com/FOFGX3a.png"
+    },
+    {
+        "name": "ASRock",
+        "logoURL": "https://i.imgur.com/ItiijmF.png"
+    },
+    {
+        "name": "MSI",
+        "logoURL": "https://i.imgur.com/d3Vks6m.png"
+    },
+    {
+        "name": "Kingston",
+        "logoURL": "https://i.imgur.com/UgxxpT2.png"
+    },
+    {
+        "name": "Galax",
+        "logoURL": "https://i.imgur.com/7Q6hT3b.png"
+    },
+    {
+        "name": "Sapphire",
+        "logoURL": "https://i.imgur.com/5ypqqA2.png"
+    },
+    {
+        "name": "Zotac",
+        "logoURL": "http://i.imgur.com/AlygL6B.png"
+    },
+    {
+        "name": "ASUS",
+        "logoURL": "https://i.imgur.com/IhDchcH.png"
+    },
+    {
+        "name": "WD",
+        "logoURL": "https://i.imgur.com/hmwZFVe.png"
+    },
+    {
+        "name": "LiteOn",
+        "logoURL": ""
+    },
+    {
+        "name": "Silverstone",
+        "logoURL": "https://i.imgur.com/CVjdvzp.png"
+    },
+    {
+        "name": "SeaSonic",
+        "logoURL": "https://i.imgur.com/t8MZe5Q.png"
+    },
+    {
+        "name": "FSP",
+        "logoURL": "https://i.imgur.com/uvA59u6.png"
+    },
+    {
+        "name": "Corsair",
+        "logoURL": "https://i.imgur.com/vS1oxat.png"
+    },
+    {
+        "name": "AOC",
+        "logoURL": "https://i.imgur.com/ZcFeFI0.png"
+    },
+    {
+        "name": "Dell",
+        "logoURL": "https://i.imgur.com/4m1dhiO.png"
+    },
+    {
+        "name": "Logitech",
+        "logoURL": "https://i.imgur.com/AqXb2QJ.png"
+    },
+    {
+        "name": "Microsoft",
+        "logoURL": "https://i.imgur.com/v9Shqfs.png"
+    },
+    {
+        "name": "Windows",
+        "logoURL": "https://i.imgur.com/4WKn6wZ.png"
+    },
+    {
+        "name": "HP",
+        "logoURL": "https://i.imgur.com/z41uxwa.png"
+    },
+    {
+        "name": "PowerColor",
+        "logoURL": "https://i.imgur.com/cOfClCi.png"
+    },
+    {
+        "name": "G.Skill",
+        "logoURL": "http://i.imgur.com/cw9Yg7R.png"
+    }
+]

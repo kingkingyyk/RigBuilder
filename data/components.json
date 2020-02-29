@@ -1,0 +1,866 @@
+[
+    {
+        "make": "AMD",
+        "model": "Athlon 300GE",
+        "type": "Processor",
+        "description": "Zen, AM4, 2 Cores, SMT, 3.4GHz, Vega 3",
+        "url": "https://www.amd.com/en/products/apu/amd-athlon-300ge",
+        "price": 209
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 3 2300X",
+        "type": "Processor",
+        "description": "Zen+, AM4, 4 Cores, 3.5-4GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-3-2300x",
+        "price": 399
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 3 3200G",
+        "type": "Processor",
+        "description": "Zen+, AM4, 4 Cores, 3.6-4GHz, Vega 8",
+        "url": "https://www.amd.com/en/products/apu/amd-ryzen-3-3200g",
+        "price": 399
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 5 3400G",
+        "type": "Processor",
+        "description": "Zen+, AM4, 4 Cores, SMT, 3.7-4.2GHz, Vega 11",
+        "url": "https://www.amd.com/en/products/apu/amd-ryzen-5-3400g",
+        "price": 629
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 5 3500X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 6 Cores, 3.6-4.1GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-5-3500x",
+        "price": 639
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 5 3600",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 6 Cores, SMT, 3.6-4.2GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-5-3600",
+        "price": 799
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 5 3600X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 6 Cores, SMT, 3.8-4.4GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-5-3600X",
+        "price": 959
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 7 3700X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 8 Cores, SMT, 3.6-4.4GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-7-3700X",
+        "price": 1299
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 7 3800X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 8 Cores, SMT, 3.9-4.5GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-7-3800X",
+        "price": 1499
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 9 3900X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 12 Cores, SMT, 3.8-4.6GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-9-3900X",
+        "price": 2149
+    },
+    {
+        "make": "AMD",
+        "model": "Ryzen 9 3950X",
+        "type": "Processor",
+        "description": "Zen 2, AM4, 16 Cores, SMT, 3.5-4.7GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-9-3950X",
+        "price": 3149
+    },
+    {
+        "make": "AMD",
+        "model": "Threadripper 3960X",
+        "type": "Processor",
+        "description": "Zen 2, sTRX4, 24 Cores, SMT, 3.8-4.5GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-3960x",
+        "price": 5899
+    },
+    {
+        "make": "AMD",
+        "model": "Threadripper 3970X",
+        "type": "Processor",
+        "description": "Zen 2, sTRX4, 32 Cores, SMT, 3.7-4.5GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-3970x",
+        "price": 8399
+    },
+    {
+        "make": "AMD",
+        "model": "Threadripper 3990X",
+        "type": "Processor",
+        "description": "Zen 2, sTRX4, 64 Cores, SMT, 2.9-4.3GHz",
+        "url": "https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-3990x",
+        "price": 16999
+    },
+    {
+        "make": "Intel",
+        "model": "Pentium Dual Core G5420",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 2 Cores, HT, 3.8GHz, UHD610",
+        "url": "https://www.intel.com/content/www/us/en/products/processors/pentium/g5420.html",
+        "price": 239
+    },
+    {
+        "make": "Intel",
+        "model": "Core i3 9100F",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 4 Cores, 3.6GHz, UHD630",
+        "url": "https://ark.intel.com/content/www/us/en/ark/products/190886/intel-core-i3-9100f-processor-6m-cache-up-to-4-20-ghz.html",
+        "price": 319
+    },
+    {
+        "make": "Intel",
+        "model": "Core i5 9400F",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 6 Cores, 2.9-4.1GHz",
+        "url": "https://ark.intel.com/content/www/us/en/ark/products/190883/intel-core-i5-9400f-processor-9m-cache-up-to-4-10-ghz.html",
+        "price": 589
+    },
+    {
+        "make": "Intel",
+        "model": "Core i5 9600K",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 6 Cores, 3.7-4.6GHz, UHD630",
+        "url": "https://ark.intel.com/content/www/us/en/ark/products/134896/intel-core-i5-9600k-processor-9m-cache-up-to-4-60-ghz.html",
+        "price": 999
+    },
+    {
+        "make": "Intel",
+        "model": "Core i7 9700F",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 8 Cores, 3-4.7GHz",
+        "url": "https://ark.intel.com/content/www/us/en/ark/products/193738/intel-core-i7-9700f-processor-12m-cache-up-to-4-70-ghz.html",
+        "price": 1399
+    },
+    {
+        "make": "Intel",
+        "model": "Core i9 9900KF",
+        "type": "Processor",
+        "description": "Coffee Lake, LGA1151, 8 Cores, HT, 3.6-5GHz",
+        "url": "https://ark.intel.com/content/www/us/en/ark/products/190887/intel-core-i9-9900kf-processor-16m-cache-up-to-5-00-ghz.html",
+        "price": 1999
+    },
+    {
+        "make": "CoolerMaster",
+        "model": "Hyper 411R",
+        "type": "Cooler",
+        "description": "92mm x1, LGA1151, LGA2011-3, AM4, White LED",
+        "url": "http://www.coolermaster.com/cooling/cpu-air-cooler/hyper-h411r/",
+        "price": 79
+    },
+    {
+        "make": "CoolerMaster",
+        "model": "Hyper 212 RGB Black Edition",
+        "type": "Cooler",
+        "description": "120mm x1, LGA1151, LGA2011-3, AM4, RGB",
+        "url": "https://www.coolermaster.com/catalog/coolers/cpu-air-coolers/hyper-212-rgb-black-edition/",
+        "price": 167
+    },
+    {
+        "make": "Silverstone",
+        "model": "PF240-ARGB",
+        "type": "Cooler",
+        "description": "120mm x2, LGA1151, LGA2011-3, AM4, RGB",
+        "url": "https://www.silverstonetek.com/product.php?pid=866&area=en",
+        "price": 299
+    },
+    {
+        "make": "Noctua",
+        "model": "NH-U14S + NF-A15",
+        "type": "Cooler",
+        "description": "120mm x2, TR4",
+        "url": "https://noctua.at/en/products/cpu-cooler-workstation-server/nh-u14s-tr4-sp3",
+        "price": 454
+    },
+    {
+        "make": "Thermaltake",
+        "model": "Water 3.0 360 ARGB",
+        "type": "Cooler",
+        "description": "120mm x3, LGA1151, LGA2011-3, AM4, TR4, RGB",
+        "url": "https://www.silverstonetek.com/product.php?pid=866&area=en",
+        "price": 599
+    },
+    {
+        "make": "ASRock",
+        "model": "H310M-HDV",
+        "type": "Motherboard",
+        "description": "LGA1151, 2xDDR4",
+        "url": "https://www.asrock.com/MB/Intel/H310M-HDV/index.asp",
+        "price": 206
+    },
+    {
+        "make": "MSI",
+        "model": "A320M Pro-M2 V2",
+        "type": "Motherboard",
+        "description": "AM4, 2xDDR4, 1xM.2",
+        "url": "https://www.msi.com/Motherboard/A320M-PRO-M2-V2.html",
+        "price": 229
+    },
+    {
+        "make": "MSI",
+        "model": "B450M-A PRO MAX",
+        "type": "Motherboard",
+        "description": "AM4, 2xDDR4, 1xM.2",
+        "url": "https://www.msi.com/Motherboard/B450M-A-PRO-MAX/Overview",
+        "price": 265
+    },
+    {
+        "make": "ASRock",
+        "model": "B365M Pro4",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 2xM.2",
+        "url": "https://www.asrock.com/MB/Intel/B365M%20Pro4/index.asp",
+        "price": 339
+    },
+    {
+        "make": "MSI",
+        "model": "B450M PRO-VDH MAX",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 1xM.2",
+        "url": "https://www.msi.com/Motherboard/B450M-PRO-VDH-MAX",
+        "price": 342
+    },
+    {
+        "make": "MSI",
+        "model": "B450M Mortar MAX",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 2xM.2",
+        "url": "https://www.msi.com/Motherboard/B450M-MORTAR-MAX",
+        "price": 479
+    },
+    {
+        "make": "MSI",
+        "model": "X470 Gaming Plus",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 2xM.2",
+        "url": "https://www.msi.com/Motherboard/X470-GAMING-PLUS.html",
+        "price": 521
+    },
+    {
+        "make": "MSI",
+        "model": "MPG Z390 Gaming Plus",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 2xM.2",
+        "url": "https://www.msi.com/Motherboard/MPG-Z390-GAMING-PLUS",
+        "price": 582
+    },
+    {
+        "make": "MSI",
+        "model": "X570-A PRO",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 2xM.2",
+        "url": "https://www.msi.com/Motherboard/X570-A-PRO",
+        "price": 739
+    },
+    {
+        "make": "MSI",
+        "model": "MEG X570 ACE",
+        "type": "Motherboard",
+        "description": "AM4, 4xDDR4, 3xM.2, SLI, CrossFireX",
+        "url": "https://www.msi.com/Motherboard/MEG-X570-ACE",
+        "price": 1689
+    },
+    {
+        "make": "ASUS",
+        "model": "Prime TRX40-Pro",
+        "type": "Motherboard",
+        "description": "sTRX4, 8xDDR4, 3xM.2, SLI, CrossFireX",
+        "url": "https://www.msi.com/Motherboard/MEG-X570-ACE",
+        "price": 1799
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Fury RGB 8GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL18",
+        "url": "https://www.hyperxgaming.com/us/memory/fury-ddr4-rgb",
+        "price": 199
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Fury RGB 2x8GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL18",
+        "url": "https://www.hyperxgaming.com/us/memory/fury-ddr4-rgb",
+        "price": 398
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Fury RGB 16GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL18",
+        "url": "https://www.hyperxgaming.com/us/memory/fury-ddr4-rgb",
+        "price": 399
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Fury RGB 2x16GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL18",
+        "url": "https://www.hyperxgaming.com/us/memory/fury-ddr4-rgb",
+        "price": 769
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Predator RGB 2x16GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL16",
+        "url": "https://www.hyperxgaming.com/us/memory/predator-ddr4-rgb",
+        "price": 829
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Predator RGB 2x8GB DDR4 4000MHz",
+        "type": "RAM",
+        "description": "CL19",
+        "url": "https://www.hyperxgaming.com/us/memory/predator-ddr4-rgb",
+        "price": 866
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Predator RGB 4x16GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL16",
+        "url": "https://www.hyperxgaming.com/us/memory/predator-ddr4-rgb",
+        "price": 1658
+    },
+    {
+        "make": "Kingston",
+        "model": "HyperX Predator RGB 8x16GB DDR4 3200MHz",
+        "type": "RAM",
+        "description": "CL16",
+        "url": "https://www.hyperxgaming.com/us/memory/predator-ddr4-rgb",
+        "price": 3316
+    },
+    {
+        "make": "MSI",
+        "model": "GTX1650 Ventus XS",
+        "type": "Graphics Card",
+        "description": "4GB GDDR5",
+        "url": "https://www.msi.com/Graphics-card/GeForce-GTX-1650-VENTUS-XS-4G",
+        "price": 658
+    },
+    {
+        "make": "ASUS",
+        "model": "GTX1650 Super Pheonix OC",
+        "type": "Graphics Card",
+        "description": "4GB GDDR5",
+        "url": "https://www.asus.com/my/Graphics-Cards/PH-GTX1650S-O4G/",
+        "price": 769
+    },
+    {
+        "make": "Zotac",
+        "model": "GTX1660 Twin Fan",
+        "type": "Graphics Card",
+        "description": "6GB GDDR6",
+        "url": "https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-gtx-1660-twin-fan",
+        "price": 849
+    },
+    {
+        "make": "ASRock",
+        "model": "RX 5500 XT Challenger D",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "http://www.asrock.com/Graphics-Card/AMD/Radeon%20RX%205500%20XT%20Challenger%20D%208G%20OC/",
+        "price": 899
+    },
+    {
+        "make": "Zotac",
+        "model": "GTX1660 Super AMP",
+        "type": "Graphics Card",
+        "description": "6GB GDDR6",
+        "url": "https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-gtx-1660-super-amp",
+        "price": 1029
+    },
+    {
+        "make": "MSI",
+        "model": "GTX1660 Ti Ventus XS OC",
+        "type": "Graphics Card",
+        "description": "6GB GDDR6",
+        "url": "https://www.msi.com/Graphics-card/GeForce-GTX-1660-Ti-VENTUS-XS-6G",
+        "price": 1209
+    },
+    {
+        "make": "Zotac",
+        "model": "RTX2060 Twin Fan",
+        "type": "Graphics Card",
+        "description": "6GB GDDR6",
+        "url": "https://www.zotac.com/us/product/graphics_card/zotac-gaming-geforce-rtx-2060-twin-fan",
+        "price": 1275
+    },
+    {
+        "make": "Gigabyte",
+        "model": "RX 5600XT Gaming OC",
+        "type": "Graphics Card",
+        "description": "6GB GDDR6",
+        "url": "https://www.gigabyte.com/my/Graphics-Card/GV-R56XTGAMING-OC-6GD#kf",
+        "price": 1422
+    },
+    {
+        "make": "ASUS",
+        "model": "RX 5700 Evo",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "https://www.asus.com/my/Graphics-Cards/TUF-3-RX5700-O8G-EVO-GAMING/",
+        "price": 1625
+    },
+    {
+        "make": "Zotac",
+        "model": "RTX 2060 Super Mini",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "https://www.zotac.com/product/graphics_card/zotac-gaming-geforce-rtx-2060-super-mini",
+        "price": 1699
+    },
+    {
+        "make": "Sapphire",
+        "model": "RX 5700XT",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "https://www.sapphiretech.com/en/consumer/nitro-radeon-rx-5700-xt-8g-gddr6",
+        "price": 1835
+    },
+    {
+        "make": "Zotac",
+        "model": "RTX2070 Super Air",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "https://www.zotac.com/hk/product/graphics_card/zotac-gaming-geforce-rtx-2070-super-air",
+        "price": 2089
+    },
+    {
+        "make": "Galax",
+        "model": "RTX2080 Super EX",
+        "type": "Graphics Card",
+        "description": "8GB GDDR6",
+        "url": "http://www.galax.com/en/graphics-card/20-series/galax-geforce-rtx-2080-super-ex-1click.html",
+        "price": 3129
+    },
+    {
+        "make": "Palit",
+        "model": "RTX2080 Ti Dual",
+        "type": "Graphics Card",
+        "description": "11GB GDDR6",
+        "url": "http://www.palit.com/palit/vgapro.php?id=3055&lang=en",
+        "price": 4650
+    },
+    {
+        "make": "Kingston",
+        "model": "UV500 120GB",
+        "type": "SSD",
+        "description": "SATA 2.5', Marvell 88SS1074, Toshiba 15nm 64-layers 3D TLC",
+        "url": "https://www.kingston.com/us/ssd/uv500-solid-state-drive",
+        "price": 149
+    },
+    {
+        "make": "Kingston",
+        "model": "UV500 240GB",
+        "type": "SSD",
+        "description": "SATA 2.5', Marvell 88SS1074, Toshiba 15nm 64-layers 3D TLC",
+        "url": "https://www.kingston.com/us/ssd/uv500-solid-state-drive",
+        "price": 199
+    },
+    {
+        "make": "Kingston",
+        "model": "A2000 250GB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x2, NVMe, SMI SM2263EMG, IMFT 96-layers 3D TLC",
+        "url": "https://www.kingston.com/en/ssd/a2000-nvme-pcie-ssd",
+        "price": 229
+    },
+    {
+        "make": "Kingston",
+        "model": "A2000 500GB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x2, NVMe, SMI SM2263EMG, IMFT 96-layers 3D TLC",
+        "url": "https://www.kingston.com/en/ssd/a2000-nvme-pcie-ssd",
+        "price": 369
+    },
+    {
+        "make": "WD",
+        "model": "Black SN750 500GB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe",
+        "url": "https://www.westerndigital.com/products/internal-drives/wd-black-sn750-nvme-ssd",
+        "price": 449
+    },
+    {
+        "make": "WD",
+        "model": "Black SN750 500GB + Heatsink",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe, Sandisk Controller, Sandisk 64-layers 3D TLC",
+        "url": "https://www.westerndigital.com/products/internal-drives/wd-black-sn750-nvme-ssd",
+        "price": 499
+    },
+    {
+        "make": "Kingston",
+        "model": "A2000 1TB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe, SMI SM2263EMG, IMFT 96-layers 3D TLC",
+        "url": "https://www.kingston.com/en/ssd/a2000-nvme-pcie-ssd",
+        "price": 669
+    },
+    {
+        "make": "WD",
+        "model": "Black SN750 1TB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe, Sandisk Controller, Sandisk 64-layers 3D TLC",
+        "url": "https://www.westerndigital.com/products/internal-drives/wd-black-sn750-nvme-ssd",
+        "price": 849
+    },
+    {
+        "make": "WD",
+        "model": "Black SN750 1TB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe, Sandisk Controller, Sandisk 64-layers 3D TLC",
+        "url": "https://www.westerndigital.com/products/internal-drives/wd-black-sn750-nvme-ssd",
+        "price": 949
+    },
+    {
+        "make": "Kingston",
+        "model": "KC2000 2TB",
+        "type": "SSD",
+        "description": "PCI-E 3.0 x4, NVMe, SMI SM2262EN, Toshiba 96-layers 3D TLC",
+        "url": "https://www.kingston.com/us/ssd/kc2000-m-2-nvme-3d-nand-solid-state-drive",
+        "price": 1799
+    },
+    {
+        "make": "WD",
+        "model": "Blue 1TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": "https://www.westerndigital.com/products/internal-drives/wd-blue-hdd",
+        "price": 169
+    },
+    {
+        "make": "Toshiba",
+        "model": "P300 2TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": "https://www.toshiba-storage.com/products/toshiba-internal-hard-drives-p300/",
+        "price": 239
+    },
+    {
+        "make": "Hitachi",
+        "model": "Deskstar NAS 3TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": null,
+        "price": 439
+    },
+    {
+        "make": "Hitachi",
+        "model": "Deskstar NAS 4TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": null,
+        "price": 549
+    },
+    {
+        "make": "Hitachi",
+        "model": "Deskstar NAS 6TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": null,
+        "price": 799
+    },
+    {
+        "make": "Hitachi",
+        "model": "Deskstar NAS 8TB",
+        "type": "HDD",
+        "description": "7200RPM",
+        "url": null,
+        "price": 1099
+    },
+    {
+        "make": "LiteOn",
+        "model": "DVD-RW",
+        "type": "ODD",
+        "description": null,
+        "url": "http://www.liteonodd.com/en/dvd-internal/item/dvdinternal/ihas-124.html",
+        "price": 49
+    },
+    {
+        "make": "ASUS",
+        "model": "Blu-Ray",
+        "type": "ODD",
+        "description": null,
+        "url": "https://www.asus.com/my/Optical-Drives-Storage/BW16D1HT_PRO/",
+        "price": 399
+    },
+    {
+        "make": "Silverstone",
+        "model": "ST50F-ES230 500W",
+        "type": "PSU",
+        "description": "80+ EU 230V",
+        "url": "https://www.silverstonetek.com/product.php?pid=362&area=en",
+        "price": 139
+    },
+    {
+        "make": "FSP",
+        "model": "Raider II 550W",
+        "type": "PSU",
+        "description": "80+ Silver",
+        "url": "https://www.fsplifestyle.com/en/product/RaiderII550w.html",
+        "price": 228
+    },
+    {
+        "make": "Silverstone",
+        "model": "ST65F-GS 650W",
+        "type": "PSU",
+        "description": "80+ Gold, Modular",
+        "url": "https://www.silverstonetek.com/product.php?pid=813&area=en",
+        "price": 329
+    },
+    {
+        "make": "FSP",
+        "model": "Dagger Pro 650W",
+        "type": "PSU",
+        "description": "80+ Gold, SFX, Modular",
+        "url": "https://www.fsplifestyle.com/en/product/DAGGERPRO650W.html",
+        "price": 404
+    },
+    {
+        "make": "FSP",
+        "model": "Hydro PTM 650W",
+        "type": "PSU",
+        "description": "80+ Platinum, Modular",
+        "url": "https://www.fsplifestyle.com/PROP175002337/",
+        "price": 508
+    },
+    {
+        "make": "FSP",
+        "model": "Hydro PTM 750W",
+        "type": "PSU",
+        "description": "80+ Platinum, Modular",
+        "url": "https://www.fsplifestyle.com/en/product/HydroPTM750W.html",
+        "price": 568
+    },
+    {
+        "make": "Corsair",
+        "model": "HX850 850W",
+        "type": "PSU",
+        "description": "80+ Platinum, Modular",
+        "url": "https://www.corsair.com/ww/en/Categories/Products/Power-Supply-Units/hxi-series-2017-config/p/CP-9020138-NA",
+        "price": 719
+    },
+    {
+        "make": "Corsair",
+        "model": "AX850 850W",
+        "type": "PSU",
+        "description": "80+ Titanium, Modular",
+        "url": "https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/AX-Series%E2%84%A2-80-PLUS-Titanium-Power-Supplies/p/CP-9020151-NA",
+        "price": 959
+    },
+    {
+        "make": "Corsair",
+        "model": "HX1000i 1000W",
+        "type": "PSU",
+        "description": "80+ Platinum, Modular",
+        "url": "https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/hxi-series-config/p/CP-9020074-NA",
+        "price": 959
+    },
+    {
+        "make": "Corsair",
+        "model": "AX1600i 1600W",
+        "type": "PSU",
+        "description": "80+ Titanium, Modular",
+        "url": "https://www.corsair.com/ax1600i-digital-atx-power-supply-1600-watt-fully-modular-psu-na",
+        "price": 1999
+    },
+    {
+        "make": "Casing",
+        "model": "(100)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 100
+    },
+    {
+        "make": "Casing",
+        "model": "(150)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 150
+    },
+    {
+        "make": "Casing",
+        "model": "(200)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 200
+    },
+    {
+        "make": "Casing",
+        "model": "(300)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 300
+    },
+    {
+        "make": "Casing",
+        "model": "(500)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 500
+    },
+    {
+        "make": "Casing",
+        "model": "(1000)",
+        "type": "Casing",
+        "description": null,
+        "url": null,
+        "price": 100
+    },
+    {
+        "make": "HP",
+        "model": "20KD",
+        "type": "Monitor",
+        "description": "19.5\", WXGA IPS",
+        "url": "https://store.hp.com/my-en/default/hp-20kd-19-5-inch-monitor-t3u84aa.html",
+        "price": 299
+    },
+    {
+        "make": "Dell",
+        "model": "SE2219HX",
+        "type": "Monitor",
+        "description": "21.5\", Full HD, IPS",
+        "url": "https://www.dell.com/en-my/shop/dell-22-monitor-se2219hx/apd/210-aqxw/monitors-monitor-accessories",
+        "price": 399
+    },
+    {
+        "make": "Dell",
+        "model": "SE2419H",
+        "type": "Monitor",
+        "description": "24\", Full HD, IPS",
+        "url": "https://www.dell.com/en-us/shop/dell-24-monitor-se2419h/apd/210-arbx/monitors-monitor-accessories",
+        "price": 459
+    },
+    {
+        "make": "Dell",
+        "model": "U2419H",
+        "type": "Monitor",
+        "description": "24\", Full HD, IPS",
+        "url": "https://www.dell.com/en-my/shop/dell-ultrasharp-24-monitor-u2419h/apd/210-aqxc/monitors-monitor-accessories",
+        "price": 1069
+    },
+    {
+        "make": "Dell",
+        "model": "U2518D",
+        "type": "Monitor",
+        "description": "25\", QHD, IPS",
+        "url": "https://www.dell.com/en-my/shop/dell-ultrasharp-monitor-u2518d/apd/210-amup/monitors-monitor-accessories",
+        "price": 1549
+    },
+    {
+        "make": "Dell",
+        "model": "SE2719H",
+        "type": "Monitor",
+        "description": "27\", Full HD, IPS",
+        "url": "https://www.dell.com/ng/business/p/dell-se2719h-monitor/pd",
+        "price": 679
+    },
+    {
+        "make": "Dell",
+        "model": "S2719H",
+        "type": "Monitor",
+        "description": "27\", Full HD, IPS",
+        "url": "https://www.dell.com/en-my/shop/dell-27-monitor-s2719h/apd/210-aowq/monitors-monitor-accessories",
+        "price": 989
+    },
+    {
+        "make": "Dell",
+        "model": "U2719D",
+        "type": "Monitor",
+        "description": "27\", QHD, IPS",
+        "url": "https://www.dell.com/en-my/shop/dell-ultrasharp-27-monitor-u2719d/apd/210-aqwz/monitors-monitor-accessories",
+        "price": 2029
+    },
+    {
+        "make": "Logitech",
+        "model": "K120",
+        "type": "Keyboard",
+        "description": null,
+        "url": "https://www.logitech.com/en-my/keyboards",
+        "price": 39
+    },
+    {
+        "make": "Logitech",
+        "model": "MK100",
+        "type": "Keyboard + Mouse",
+        "description": null,
+        "url": "https://www.logitech.com/en-my/keyboards",
+        "price": 44
+    },
+    {
+        "make": "Logitech",
+        "model": "MK220",
+        "type": "Wireless Keyboard + Mouse",
+        "description": null,
+        "url": "https://www.logitech.com/en-my/keyboards",
+        "price": 89
+    },
+    {
+        "make": "Logitech",
+        "model": "M100R",
+        "type": "Mouse",
+        "description": null,
+        "url": "https://www.logitech.com/en-my/keyboards",
+        "price": 25
+    },
+    {
+        "make": "Windows",
+        "model": "10 OEM 64bit",
+        "type": "Operating System",
+        "description": null,
+        "url": "https://www.microsoft.com/en-us/windowsforbusiness",
+        "price": 479
+    },
+    {
+        "make": "Windows",
+        "model": "10 Retail 64bit",
+        "type": "Operating System",
+        "description": null,
+        "url": "https://www.microsoft.com/en-us/windowsforbusiness",
+        "price": 649
+    },
+    {
+        "make": "Windows",
+        "model": "10 Pro OEM 64bit",
+        "type": "Operating System",
+        "description": null,
+        "url": "https://www.microsoft.com/en-us/windowsforbusiness",
+        "price": 579
+    },
+    {
+        "make": "Windows",
+        "model": "10 Pro Retail 64bit",
+        "type": "Operating System",
+        "description": null,
+        "url": "https://www.microsoft.com/en-us/windowsforbusiness",
+        "price": 929
+    }
+]
