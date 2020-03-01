@@ -98,5 +98,26 @@
     {
         "name": "G.Skill",
         "logoURL": "http://i.imgur.com/cw9Yg7R.png"
+    },
+    {
+        "name": "Hitachi",
+        "logoURL": ""
+    },
+    {
+        "name": "Toshiba",
+        "logoURL": ""
+    },
+    {
+        "name": "Noctua",
+        "logoURL": ""
+    },
+    {
+        "name": "Gigabyte",
+        "logoURL": ""
+    },
+    ,
+    {
+        "name": "Palit",
+        "logoURL": ""
     }
 ]
