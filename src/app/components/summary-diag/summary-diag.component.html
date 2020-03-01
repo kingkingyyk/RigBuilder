@@ -1,10 +1,10 @@
 <h1 mat-dialog-title>Summary</h1>
-<div mat-dialog-content style="padding: 5px">
+<div mat-dialog-content style="padding: 5px" class="part-list">
     <mat-list role="list" dense>
         <mat-list-item role="listitem" *ngFor="let part of data.parts">{{part.make.name}} {{part.model}} RM{{part.price}}</mat-list-item>
     </mat-list>
-    <p style="width: 100%; text-align: center">Total : RM{{data.total}}</p>
 </div>
+<p style="width: 100%; text-align: center">Total : RM{{data.total}}</p>
 <div mat-dialog-actions>
     <button mat-button [cdkCopyToClipboard]="clipboardText" (click)="popupClipboardCopied()">Copy to Clipboard</button>
     <button mat-button (click)="close()">Close</button>

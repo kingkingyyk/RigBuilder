@@ -8,17 +8,19 @@
     <mat-menu #recommendedMenu="matMenu">
       <button mat-menu-item *ngFor="let build of builds" (click)="populateRecommended(build)">{{build.usage}} - RM{{build.price}}</button>
     </mat-menu>
-    
     <button mat-icon-button [matMenuTriggerFor]="recommendedMenu">
       <mat-icon>star</mat-icon>
     </button>
+
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="card-container">
+<div class="card-container" *ngIf="componentTypes && makes && parts">
   <comp-card *ngFor="let componentType of componentTypes" [type]="componentType" [makes]="makes" [parts]="parts"></comp-card>
 </div>
 <mat-toolbar class="summary" color="primary">
   <span style="font-size: medium">RM{{total}}</span>
+  <span class="spacer"></span>
+  <span style="font-size: medium" *ngIf="commit">Last Updated {{commit.committer.date | date:'dd MMM yyyy'}}</span>
   <span class="spacer"></span>
   <button mat-flat-button color="accent" (click)="openSummary()">Summary</button>
 </mat-toolbar>

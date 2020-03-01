@@ -21,6 +21,14 @@ export class Build {
   parts: any[];
   price: number;
 }
+export class Commit {
+  committer : Committer
+}
+export class Committer {
+  name : string;
+  email : string;
+  date : Date;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -34,6 +42,7 @@ export class AppComponent implements OnInit {
   total = 0;
   builds: Build[];
 
+  commit: Commit;
   loading = false;
   loadingError = false;
 
@@ -43,6 +52,11 @@ export class AppComponent implements OnInit {
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.service.getLatestUpdate().subscribe((o : object) => {
+      this.commit=o['commit'];
+      console.log(this.commit);
+    });
+
     this.loading = true;
     this.loadingError = false;
     this.service.getComponentTypes().subscribe((ct: string[]) => {
@@ -69,7 +83,6 @@ export class AppComponent implements OnInit {
                 bp.push(tp);
                 build.price += tp.price;
               }
-              console.log(build);
               build.parts = bp;
             }
           }, error => this.loadingError = true).add(() => this.loading = false);
@@ -98,7 +111,11 @@ export class AppComponent implements OnInit {
   }
 
   populateRecommended(build : Build) {
-
+    for (let c of this.cards) {
+      c.selectedPart = this.getDummyPart(c.type);
+      for (let p of build.parts) if (c.type === p.type) c.selectedPart = p;
+    }
+    this.updateTotal();
   }
 
   private createDummyMake(): Make {
@@ -120,6 +137,9 @@ export class AppComponent implements OnInit {
     c.url = null;
     c.price = 0;
     return c;
+  }
+  private getDummyPart(type : string) : Part {
+    for (let p of this.parts) if (p.type === type && p.model === 'N/A') return p;
   }
   private locatePart(name: string): Part {
     for (let part of this.parts) {

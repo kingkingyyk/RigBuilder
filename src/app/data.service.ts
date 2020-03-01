@@ -5,12 +5,16 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
+  private static commitData : string = "https://api.github.com/repos/kingkingyyk/rigbuilder/commits/master";
   private static componentTypes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/component-types.json";
   private static makes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/makes.json";
   private static components : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/components.json";
   private static recommendations : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/recommendations.json";
 
   constructor(private client : HttpClient) { }
+  getLatestUpdate() {
+    return this.client.get(DataService.commitData);
+  }
   getComponentTypes() {
     return this.client.get(DataService.componentTypes);
   }
