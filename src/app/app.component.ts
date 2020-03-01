@@ -54,7 +54,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.service.getLatestUpdate().subscribe((o : object) => {
       this.commit=o['commit'];
-      console.log(this.commit);
     });
 
     this.loading = true;
