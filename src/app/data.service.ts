@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
   private static commitData : string = "https://api.github.com/repos/kingkingyyk/rigbuilder/commits/master";
-  private static componentTypes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/component-types.json";
-  private static makes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/makes.json";
-  private static components : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/components.json";
-  private static recommendations : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/develop/data/recommendations.json";
+  private static componentTypes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/master/data/component-types.json";
+  private static makes : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/master/data/makes.json";
+  private static components : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/master/data/components.json";
+  private static recommendations : string = "https://raw.githubusercontent.com/kingkingyyk/RigBuilder/master/data/recommendations.json";
 
   constructor(private client : HttpClient) { }
   getLatestUpdate() {
