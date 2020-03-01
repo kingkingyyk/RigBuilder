@@ -66,7 +66,7 @@
     {
         "usage": "Creation",
         "parts": [
-            "AMD Ryzen 7 3900X",
+            "AMD Ryzen 9 3900X",
             "CoolerMaster Hyper 212 RGB Black Edition",
             "MSI X470 Gaming Plus",
             "Kingston HyperX Fury RGB 2x16GB DDR4 3200MHz",
@@ -81,7 +81,7 @@
     {
         "usage": "Creation",
         "parts": [
-            "AMD Ryzen 7 3950X",
+            "AMD Ryzen 9 3950X",
             "CoolerMaster Hyper 212 RGB Black Edition",
             "MSI X570-A PRO",
             "Kingston HyperX Fury RGB 2x16GB DDR4 3200MHz",
@@ -96,7 +96,7 @@
     {
         "usage": "Creation",
         "parts": [
-            "AMD Ryzen 7 3960X",
+            "AMD Threadripper 3960X",
             "Noctua NH-U14S + NF-A15",
             "ASUS Prime TRX40-Pro",
             "Kingston HyperX Predator RGB 4x16GB DDR4 3200MHz",

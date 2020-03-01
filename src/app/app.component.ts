@@ -124,7 +124,7 @@ export class AppComponent implements OnInit {
   private locatePart(name: string): Part {
     for (let part of this.parts) {
       let n = ''
-      if (part.make) n += part.make.name + ' ';
+      if (part.make.name != null) n += part.make.name + ' ';
       n += part.model;
       if (n === name) return part;
     }
