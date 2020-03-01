@@ -5,6 +5,10 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <div class="card-container">
-  <comp-card *ngFor="let componentType of componentTypes" [type]="componentType" [makes]="makes" [parts]="parts">
-  </comp-card>
+  <comp-card *ngFor="let componentType of componentTypes" [type]="componentType" [makes]="makes" [parts]="parts"></comp-card>
 </div>
+<mat-toolbar class="summary" color="primary">
+  <span style="font-size: medium">RM{{total}}</span>
+  <span class="spacer"></span>
+  <button mat-flat-button color="accent" (click)="openSummary()">Summary</button>
+</mat-toolbar>

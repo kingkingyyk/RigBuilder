@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Part, Make } from 'src/app/app.component';
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Part, Make, AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'comp-card',
@@ -10,12 +10,20 @@ export class CompCardComponent implements OnInit {
   @Input('type') type : string;
   @Input() parts : Part[];
   @Input() makes : Make[];
+  selectedPart : Part = null;
 
-  constructor() { }
+  constructor(@Inject(AppComponent) private parent: AppComponent) { }
 
   ngOnInit(): void {
-    this.parts = this.parts.filter((part => part.type === this.type));
-    this.parts.sort((a,b) => a.price - b.price);
+    setTimeout(() => {
+      for (let p of this.parts) if (p.type === this.type) {
+        this.selectedPart = p;
+        break;
+      }
+    }, 100);
   }
 
+  onSelectedPartChanges() {
+    this.parent.updateTotal();
+  }
 }

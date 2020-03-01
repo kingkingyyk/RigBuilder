@@ -1,10 +1,36 @@
-<mat-card>
-    <mat-form-field>
-        <mat-label>{{type}}</mat-label>
-        <mat-select>
-          <mat-option *ngFor="let part of parts" [value]="part">
-            {{part.make.name}} {{part.model}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+<mat-card style="margin: 10px;">
+    <table>
+        <tr>
+            <td style="width: 350px">
+                <mat-form-field style="width: 100%">
+                    <mat-label>{{type}}</mat-label>
+                    <mat-select [(value)]="selectedPart" (selectionChange)="onSelectedPartChanges()">
+                        <ng-container *ngFor="let part of parts">
+                            <mat-option *ngIf="part.type === type" [value]="part">
+                                {{part.make.name}} {{part.model}} 
+                                <ng-container *ngIf="selectedPart">
+                                    <ng-container *ngIf="part.price > selectedPart.price">
+                                        (+RM{{part.price - selectedPart.price}})
+                                    </ng-container>
+                                    <ng-container *ngIf="part == selectedPart">
+                                        (RM{{part.price}})
+                                    </ng-container>
+                                    <ng-container *ngIf="part.price < selectedPart.price">
+                                        (-RM{{selectedPart.price - part.price}})
+                                    </ng-container>
+                                </ng-container>
+                            </mat-option>
+                        </ng-container>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+            <td rowspan=2>
+                <img *ngIf="selectedPart" src="{{selectedPart.make.logoURL}}">
+                <button mat-button color="warn" *ngIf="selectedPart && selectedPart.url"><a href="{{selectedPart.url}}">Product Page</a></button>
+            </td>
+        </tr>
+        <tr>
+            <span style="font-size: small;" *ngIf="selectedPart">{{selectedPart.description}}</span>
+        </tr>
+    </table>
 </mat-card>

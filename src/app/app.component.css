@@ -3,9 +3,20 @@ mat-icon {
 }
 
 .card-container {
-    width: 100%;
+    width: min(80vw, 600px);
+    margin: auto auto 80px auto;
 }
 mat-card {
     margin: 10px;
     width: 30%;
+}
+
+.summary {
+    position: fixed;
+    bottom: 0px;
+    z-index: 3;
+}
+
+.spacer {
+    flex: 1 1 auto;
 }
