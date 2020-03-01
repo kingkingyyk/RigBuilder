@@ -22,7 +22,8 @@ export class SummaryDiagComponent implements OnInit {
 
   ngOnInit(): void {
     for (let p of this.data.parts) {
-      this.clipboardText += p.make.name + ' ' + p.model + ' RM' + p.price + '\n';
+      if (p.make.name) this.clipboardText += p.make.name  + ' '
+      this.clipboardText += p.model + ' RM' + p.price + '\n';
     }
     this.clipboardText += 'Total : RM'+this.data.total;
   }

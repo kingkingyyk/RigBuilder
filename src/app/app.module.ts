@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
 import { CompCardComponent } from './components/comp-card/comp-card.component';
@@ -36,6 +37,7 @@ import { SummaryDiagComponent } from './components/summary-diag/summary-diag.com
     MatDialogModule,
     MatListModule,
     MatSnackBarModule,
+    MatMenuModule,
     ClipboardModule,
   ],
   entryComponents: [

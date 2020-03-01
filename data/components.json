@@ -13,7 +13,7 @@
         "type": "Processor",
         "description": "Zen+, AM4, 4 Cores, 3.5-4GHz",
         "url": "https://www.amd.com/en/products/cpu/amd-ryzen-3-2300x",
-        "price": 399
+        "price": 299
     },
     {
         "make": "AMD",
@@ -529,7 +529,7 @@
     },
     {
         "make": "WD",
-        "model": "Black SN750 1TB",
+        "model": "Black SN750 1TB + Heatsink",
         "type": "SSD",
         "description": "PCI-E 3.0 x4, NVMe, Sandisk Controller, Sandisk 64-layers 3D TLC",
         "url": "https://www.westerndigital.com/products/internal-drives/wd-black-sn750-nvme-ssd",

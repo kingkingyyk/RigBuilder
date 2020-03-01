@@ -1,0 +1,111 @@
+[
+    {
+        "usage": "Office",
+        "parts": [
+            "AMD Athlon 300GE",
+            "MSI A320M Pro-M2 V2",
+            "Kingston HyperX Fury RGB 8GB DDR4 3200MHz",
+            "Kingston UV500 240GB",
+            "Silverstone ST50F-ES230 500W",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Office",
+        "parts": [
+            "AMD Ryzen 3 3200G",
+            "MSI A320M Pro-M2 V2",
+            "Kingston HyperX Fury RGB 8GB DDR4 3200MHz",
+            "Kingston A2000 500GB RM369",
+            "Silverstone ST50F-ES230 500W RM139",
+            "Casing (150)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 5 3400G",
+            "MSI B450M PRO-VDH MAX",
+            "Kingston HyperX Fury RGB 2x8GB DDR4 3200MHz",
+            "Kingston A2000 500GB",
+            "Toshiba P300 2TB",
+            "Silverstone ST50F-ES230 500W",
+            "Casing (150)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 5 3600",
+            "MSI B450M PRO-VDH MAX",
+            "Kingston HyperX Fury RGB 2x8GB DDR4 3200MHz",
+            "ASUS GTX1650 Super Pheonix OC",
+            "Kingston A2000 500GB",
+            "Toshiba P300 2TB",
+            "FSP Raider II 550W",
+            "Casing (200)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 7 3700X",
+            "MSI B450M Mortar MAX",
+            "Kingston HyperX Fury RGB 2x16GB DDR4 3200MHz",
+            "ASUS GTX1650 Super Pheonix OC",
+            "Kingston A2000 500GB",
+            "Toshiba P300 2TB",
+            "FSP Raider II 550W",
+            "Casing (200)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 7 3900X",
+            "CoolerMaster Hyper 212 RGB Black Edition",
+            "MSI X470 Gaming Plus",
+            "Kingston HyperX Fury RGB 2x16GB DDR4 3200MHz",
+            "ASUS GTX1650 Super Pheonix OC",
+            "Kingston A2000 500GB",
+            "Toshiba P300 2TB",
+            "FSP Raider II 550W",
+            "Casing (300)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 7 3950X",
+            "CoolerMaster Hyper 212 RGB Black Edition",
+            "MSI X570-A PRO",
+            "Kingston HyperX Fury RGB 2x16GB DDR4 3200MHz",
+            "Zotac RTX2060 Twin Fan",
+            "Kingston A2000 1TB",
+            "Toshiba P300 2TB",
+            "FSP Hydro PTM 650W",
+            "Casing (300)",
+            "Windows 10 OEM 64bit"
+        ]
+    },
+    {
+        "usage": "Creation",
+        "parts": [
+            "AMD Ryzen 7 3960X",
+            "Noctua NH-U14S + NF-A15",
+            "ASUS Prime TRX40-Pro",
+            "Kingston HyperX Predator RGB 4x16GB DDR4 3200MHz",
+            "Zotac RTX2060 Twin Fan",
+            "WD Black SN750 1TB",
+            "Toshiba P300 2TB",
+            "FSP Hydro PTM 650W",
+            "Casing (500)",
+            "Windows 10 OEM 64bit"
+        ]
+    }
+]

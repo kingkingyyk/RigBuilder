@@ -28,6 +28,9 @@ export class AppComponent implements OnInit {
   makes : Make [];
   parts : Part [];
   total = 0;
+  
+  loading = false;
+  loadingError = false;
 
   @ViewChildren(CompCardComponent) cards : CompCardComponent[];
 
@@ -35,19 +38,27 @@ export class AppComponent implements OnInit {
               private dialog : MatDialog) {}
 
   ngOnInit(): void {
+    this.loading = true;
+    this.loadingError = false;
     this.service.getComponentTypes().subscribe((ct : string[]) => {
       this.componentTypes = ct;
+
       this.service.getMakes().subscribe((m : Make []) => {
         this.makes = m;
         this.makes.push(this.createDummyMake());
+
         this.service.getComponents().subscribe((p : Part []) => {
           this.parts = p;
           for (let ct of this.componentTypes) this.parts.push(this.createDummyPart(ct));
           for (let part of this.parts) part.make = this.locateMake(part.make);
           this.parts.sort((a,b) => a.price - b.price);
-        }, error => console.log(error));
-      }, error => console.log(error));
-    }, error => console.log(error));
+
+          this.service.getRecommendations().subscribe((data : object) => {
+            
+          }, error => this.loadingError = true).add(() => this.loading=false);
+        }, error => this.loadingError = true);
+      }, error => this.loadingError = true);
+    }, error => this.loadingError = true);
   }
 
   updateTotal() : void {
