@@ -688,48 +688,48 @@
         "price": 1999
     },
     {
-        "make": "Casing",
-        "model": "(100)",
+        "make": null,
+        "model": "Casing (100)",
         "type": "Casing",
         "description": null,
         "url": null,
         "price": 100
     },
     {
-        "make": "Casing",
-        "model": "(150)",
+        "make": null,
+        "model": "Casing (150)",
         "type": "Casing",
         "description": null,
         "url": null,
         "price": 150
     },
     {
-        "make": "Casing",
-        "model": "(200)",
+        "make": null,
+        "model": "Casing (200)",
         "type": "Casing",
         "description": null,
         "url": null,
         "price": 200
     },
     {
-        "make": "Casing",
-        "model": "(300)",
+        "make": null,
+        "model": "Casing (300)",
         "type": "Casing",
         "description": null,
         "url": null,
         "price": 300
     },
     {
-        "make": "Casing",
-        "model": "(500)",
+        "make": null,
+        "model": "Casing (500)",
         "type": "Casing",
         "description": null,
         "url": null,
         "price": 500
     },
     {
-        "make": "Casing",
-        "model": "(1000)",
+        "make": null,
+        "model": "Casing (1000)",
         "type": "Casing",
         "description": null,
         "url": null,
