@@ -6,8 +6,7 @@
     <span class="spacer"></span>
 
     <mat-menu #recommendedMenu="matMenu">
-      <button mat-menu-item>Settings</button>
-      <button mat-menu-item>Help</button>
+      <button mat-menu-item *ngFor="let build of builds" (click)="populateRecommended(build)">{{build.usage}} - RM{{build.price}}</button>
     </mat-menu>
     
     <button mat-icon-button [matMenuTriggerFor]="recommendedMenu">

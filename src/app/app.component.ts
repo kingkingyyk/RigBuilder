@@ -5,21 +5,21 @@ import { MatDialog } from '@angular/material/dialog';
 import { SummaryDiagComponent } from './components/summary-diag/summary-diag.component';
 
 export class Make {
-  name : string;
-  logoURL : string;
+  name: string;
+  logoURL: string;
 }
 export class Part {
   make: any;
-  model : string;
+  model: string;
   type: string;
-  description : string;
-  url : string;
-  price : number;
+  description: string;
+  url: string;
+  price: number;
 }
 export class Build {
   usage: string;
   parts: any[];
-  price : number;
+  price: number;
 }
 @Component({
   selector: 'app-root',
@@ -28,37 +28,37 @@ export class Build {
 })
 export class AppComponent implements OnInit {
   title = 'RigBuilder';
-  componentTypes : string [];
-  makes : Make [];
-  parts : Part [];
+  componentTypes: string[];
+  makes: Make[];
+  parts: Part[];
   total = 0;
-  builds : Build[];
-  
+  builds: Build[];
+
   loading = false;
   loadingError = false;
 
-  @ViewChildren(CompCardComponent) cards : CompCardComponent[];
+  @ViewChildren(CompCardComponent) cards: CompCardComponent[];
 
-  constructor(private service : DataService,
-              private dialog : MatDialog) {}
+  constructor(private service: DataService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.loading = true;
     this.loadingError = false;
-    this.service.getComponentTypes().subscribe((ct : string[]) => {
+    this.service.getComponentTypes().subscribe((ct: string[]) => {
       this.componentTypes = ct;
 
-      this.service.getMakes().subscribe((m : Make []) => {
+      this.service.getMakes().subscribe((m: Make[]) => {
         this.makes = m;
         this.makes.push(this.createDummyMake());
 
-        this.service.getComponents().subscribe((p : Part []) => {
+        this.service.getComponents().subscribe((p: Part[]) => {
           this.parts = p;
           for (let ct of this.componentTypes) this.parts.push(this.createDummyPart(ct));
           for (let part of this.parts) part.make = this.locateMake(part.make);
-          this.parts.sort((a,b) => a.price - b.price);
+          this.parts.sort((a, b) => a.price - b.price);
 
-          this.service.getRecommendations().subscribe((b : Build[]) => {
+          this.service.getRecommendations().subscribe((b: Build[]) => {
             this.builds = b
             for (let build of this.builds) {
               build.price = 0;
@@ -71,18 +71,18 @@ export class AppComponent implements OnInit {
               }
               build.parts = bp;
             }
-          }, error => this.loadingError = true).add(() => this.loading=false);
+          }, error => this.loadingError = true).add(() => this.loading = false);
         }, error => this.loadingError = true);
       }, error => this.loadingError = true);
     }, error => this.loadingError = true);
   }
 
-  updateTotal() : void {
+  updateTotal(): void {
     this.total = 0;
     for (let c of this.cards) this.total += c.selectedPart.price;
   }
 
-  openSummary() : void {
+  openSummary(): void {
     let p = [];
     for (let ct of this.componentTypes) {
       for (let c of this.cards) if (c.type == ct && c.selectedPart.price > 0) {
@@ -90,22 +90,27 @@ export class AppComponent implements OnInit {
         break;
       }
     }
-    const dialogRef=this.dialog.open(SummaryDiagComponent, {data:
-      {parts:p, total: this.total}
+    const dialogRef = this.dialog.open(SummaryDiagComponent, {
+      data:
+        { parts: p, total: this.total }
     });
   }
 
-  private createDummyMake() : Make {
+  populateRecommended(build : Build) {
+
+  }
+
+  private createDummyMake(): Make {
     let m = new Make();
     m.name = null;
     m.logoURL = null;
     return m;
   }
-  private locateMake(name : string) : Make {
+  private locateMake(name: string): Make {
     for (let make of this.makes) if (make.name === name) return make;
     return null;
   }
-  private createDummyPart(type : string) {
+  private createDummyPart(type: string) {
     let c = new Part();
     c.make = null;
     c.model = 'N/A';
@@ -115,8 +120,13 @@ export class AppComponent implements OnInit {
     c.price = 0;
     return c;
   }
-  private locatePart(name : string) : Part {
-    for (let part of this.parts) if (part.make.name+' '+part.model === name) return part;
+  private locatePart(name: string): Part {
+    for (let part of this.parts) {
+      let n = ''
+      if (part.make.name) n += part.make.name + ' ';
+      n += part.model;
+      if (n) return part;
+    }
     return null;
   }
 }
