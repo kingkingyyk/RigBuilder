@@ -69,6 +69,7 @@ export class AppComponent implements OnInit {
                 bp.push(tp);
                 build.price += tp.price;
               }
+              console.log(build);
               build.parts = bp;
             }
           }, error => this.loadingError = true).add(() => this.loading = false);
@@ -125,7 +126,7 @@ export class AppComponent implements OnInit {
       let n = ''
       if (part.make) n += part.make.name + ' ';
       n += part.model;
-      if (n) return part;
+      if (n === name) return part;
     }
     return null;
   }
