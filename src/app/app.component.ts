@@ -16,7 +16,11 @@ export class Part {
   url : string;
   price : number;
 }
-
+export class Build {
+  usage: string;
+  parts: any[];
+  price : number;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -28,6 +32,7 @@ export class AppComponent implements OnInit {
   makes : Make [];
   parts : Part [];
   total = 0;
+  builds : Build[];
   
   loading = false;
   loadingError = false;
@@ -53,8 +58,19 @@ export class AppComponent implements OnInit {
           for (let part of this.parts) part.make = this.locateMake(part.make);
           this.parts.sort((a,b) => a.price - b.price);
 
-          this.service.getRecommendations().subscribe((data : object) => {
-            
+          this.service.getRecommendations().subscribe((b : Build[]) => {
+            this.builds = b
+            for (let build of this.builds) {
+              build.price = 0;
+              let bp = [];
+              for (let buildPart of build.parts) {
+                let tp = this.locatePart(buildPart);
+                if (tp == null) alert(buildPart+' missing!!');
+                bp.push(tp);
+                build.price += tp.price;
+              }
+              build.parts = bp;
+            }
           }, error => this.loadingError = true).add(() => this.loading=false);
         }, error => this.loadingError = true);
       }, error => this.loadingError = true);
@@ -98,5 +114,9 @@ export class AppComponent implements OnInit {
     c.url = null;
     c.price = 0;
     return c;
+  }
+  private locatePart(name : string) : Part {
+    for (let part of this.parts) if (part.make.name+' '+part.model === name) return part;
+    return null;
   }
 }
