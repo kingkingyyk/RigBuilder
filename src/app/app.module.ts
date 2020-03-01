@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 
 import { CompCardComponent } from './components/comp-card/comp-card.component';
 
@@ -19,10 +20,11 @@ import { CompCardComponent } from './components/comp-card/comp-card.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    HttpClientModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

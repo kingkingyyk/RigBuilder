@@ -4,3 +4,7 @@
     <span>kingkingyyk's Rig Builder</span>
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="card-container">
+  <comp-card *ngFor="let componentType of componentTypes" [type]="componentType" [makes]="makes" [parts]="parts">
+  </comp-card>
+</div>
